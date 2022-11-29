@@ -10,11 +10,9 @@ import Foundation
 import Foundation
 struct Question{
     var q: String
-    var a: [String]
-    var correctAnswer: String
-    init(q: String, a: [String], correctAnswer: String) {
+    var a: String
+    init(q: String, a: String) {
         self.q = q
         self.a = a
-        self.correctAnswer = correctAnswer
     }
 }

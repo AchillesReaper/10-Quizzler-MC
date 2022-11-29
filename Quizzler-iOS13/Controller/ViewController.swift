@@ -13,9 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tfScore: UILabel!
     @IBOutlet weak var pbQuiz: UIProgressView!
     @IBOutlet weak var tfCurrentQuestion: UILabel!
-    @IBOutlet weak var btnAnswer_1: UIButton!
-    @IBOutlet weak var btnAnswer_2: UIButton!
-    @IBOutlet weak var btnAnswer_3: UIButton!
+
     
     var quiz = QuizBrain()
     var acmScore = 0
@@ -54,11 +52,6 @@ class ViewController: UIViewController {
         tfScore.text = "Score: \(acmScore)"
         tfCurrentQuestion.text = quiz.currentQuestion()
         pbQuiz.progress = quiz.quizProgress()
-        btnAnswer_1.setTitle(quiz.currentAsw(1), for: UIControl.State())
-        btnAnswer_2.setTitle(quiz.currentAsw(2), for: UIControl.State())
-        btnAnswer_3.setTitle(quiz.currentAsw(3), for: UIControl.State())
     }
-
-
 }
 
